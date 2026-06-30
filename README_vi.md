@@ -62,6 +62,7 @@ Dùng skill này khi bạn muốn:
 ## Phiên bản public
 
 - `v1.0.0`: bản public-ready đầu tiên của repo skill này
+- `v1.0.1`: bản bổ sung cơ chế hỏi lại trước khi đoán các mapping quan trọng
 
 ## Lưu ý
 
