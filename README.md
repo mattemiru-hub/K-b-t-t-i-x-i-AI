@@ -1,4 +1,4 @@
-# Excel Executive Dashboard Golden Reference
+# Excel Dashboard AI Skill
 
 GitHub-ready skill package for building Excel executive dashboards that feel closer to a Power BI cockpit than a spreadsheet report.
 
@@ -64,7 +64,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\install_local_skill.ps1
 That mirrors the repo into:
 
 ```text
-C:\Users\admin\.codex\skills\excel-executive-dashboard-golden-reference
+C:\Users\admin\.codex\skills\excel-dashboard-ai-skill
 ```
 
 ## Main scripts
