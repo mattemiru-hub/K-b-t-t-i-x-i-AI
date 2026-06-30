@@ -130,6 +130,7 @@ def main():
     excel.ScreenUpdating = False
     ws = wb.Worksheets("00_Executive_Dashboard")
 
+    # Base sheet cleanup.
     ws.Range("A1:AG60").Interior.Color = BG
     ws.Range("A1:AG4").Interior.Color = NAVY
     ws.Range("A5:E55").Borders.LineStyle = XL_NONE
@@ -137,6 +138,7 @@ def main():
     ws.Range("A44:E55").ClearContents()
     ws.Range("A5").Value = ""
 
+    # Remove previous helper shapes if re-running.
     for name in [
         "uiFilterRailBg", "uiFilterTitle", "uiGuideCard", "uiGuideTitle",
         "uiGuideSwatchHealthy", "uiGuideSwatchWatch", "uiGuideSwatchRisk",
@@ -145,6 +147,7 @@ def main():
     ]:
         delete_shape_if_exists(ws, name)
 
+    # Translate visible sheet text to one language system.
     ws.Range("A1").Value = "FMCG Executive Sales Dashboard"
     ws.Range("A3").Value = ""
     ws.Range("F6").Value = "TOTAL REVENUE"
@@ -168,6 +171,7 @@ def main():
     except Exception:
         pass
 
+    # Row rhythm for 75% zoom.
     row_heights = {
         1: 28, 2: 8, 3: 18, 4: 6, 5: 12,
         6: 18, 7: 30, 8: 4, 9: 4, 10: 20,
@@ -177,6 +181,7 @@ def main():
     for row, height in row_heights.items():
         ws.Rows(row).RowHeight = height
 
+    # Header and KPI typography.
     style_text_range(ws.Range("A1:M1"), size=18, bold=True, color=WHITE)
     style_text_range(ws.Range("A3:M3"), size=9.7, bold=False, color=LINE)
     style_text_range(ws.Range("X3:AD3"), size=9.0, bold=False, color=LINE)
@@ -188,7 +193,18 @@ def main():
     ws.Range("F10:AD10").VerticalAlignment = -4160
 
     subtitle_anchor = ws.Range("A3:H3")
-    subtitle = add_textbox(ws, "uiHeaderSubtitle", 28, subtitle_anchor.Top + 1, 320, 10, "Daily revenue, gross margin and sales execution | FMCG by day", 8.2, LINE, False)
+    subtitle = add_textbox(
+        ws,
+        "uiHeaderSubtitle",
+        28,
+        subtitle_anchor.Top + 1,
+        320,
+        10,
+        "Daily revenue, gross margin and sales execution | FMCG by day",
+        8.2,
+        LINE,
+        False,
+    )
     try:
         subtitle.TextFrame2.TextRange.ParagraphFormat.Alignment = 1
     except Exception:
@@ -196,12 +212,24 @@ def main():
 
     asof_anchor = ws.Range("Y3:AD3")
     asof_width = 106
-    asof = add_textbox(ws, "uiHeaderAsOf", asof_anchor.Left + asof_anchor.Width - asof_width - 8, asof_anchor.Top + 1, asof_width, 10, "Data through 31 Dec 2026", 7.1, LINE, False)
+    asof = add_textbox(
+        ws,
+        "uiHeaderAsOf",
+        asof_anchor.Left + asof_anchor.Width - asof_width - 8,
+        asof_anchor.Top + 1,
+        asof_width,
+        10,
+        "Data through 31 Dec 2026",
+        7.1,
+        LINE,
+        False,
+    )
     try:
         asof.TextFrame2.TextRange.ParagraphFormat.Alignment = 3
     except Exception:
         pass
 
+    # KPI cells stay clean and light.
     for rng in ("F6:J10", "K6:O10", "P6:T10", "U6:Y10", "Z6:AD10"):
         ws.Range(rng).Interior.Color = WHITE
         for edge in (7, 8, 9, 10):
@@ -209,12 +237,14 @@ def main():
             ws.Range(rng).Borders(edge).Color = LINE
             ws.Range(rng).Borders(edge).Weight = 2
 
+    # Tone down the tiny top badges.
     try:
         ws.Shapes("uiGuideButton").Visible = False
         ws.Shapes("uiExecutiveBadge").Visible = False
     except Exception:
         pass
 
+    # Make KPI chips actually readable.
     chip_specs = [
         ("uiKpiChip1", "REVENUE", "F6:J10", 56, 11, rgb(37, 99, 235)),
         ("uiKpiChip2", "TARGET", "K6:O10", 56, 11, AMBER),
@@ -238,6 +268,7 @@ def main():
         shp.TextFrame2.TextRange.Font.Bold = -1
         shp.TextFrame2.TextRange.Font.Fill.ForeColor.RGB = WHITE
 
+    # Build a cleaner filter rail.
     rail = ws.Shapes.AddShape(MSO_SHAPE_ROUNDED_RECTANGLE, 10, 77, 186, 690)
     rail.Name = "uiFilterRailBg"
     set_shape_fill(rail, rgb(250, 252, 255), LINE, 1, 0)
@@ -257,6 +288,7 @@ def main():
     except Exception:
         pass
 
+    # Slicers: narrower rail, translated captions, calmer style.
     slicer_settings = [
         ("Slicer_Year", "Year", "slYearDynamic", 16, 112, 176, 52),
         ("Slicer_Month", "Month (detail)", "slMonthDynamic", 16, 168, 176, 86),
@@ -291,6 +323,7 @@ def main():
         shp.Width = width
         shp.Height = height
 
+    # Guide card: shape-based, no worksheet table feel.
     guide = ws.Shapes.AddShape(MSO_SHAPE_ROUNDED_RECTANGLE, 16, 616, 176, 50)
     guide.Name = "uiGuideCard"
     set_shape_fill(guide, WHITE, LINE, 1.0, 0)
@@ -326,6 +359,9 @@ def main():
         set_shape_fill(sw, color, None, 0, 0)
         add_textbox(ws, tx_name, 50, top - 2, 120, 11, text, 6.6, NAVY, False)
 
+    # Keep the guide compact so it always fits inside the dashboard frame.
+
+    # Section labels and chart cards use one visual system now.
     ws.Shapes("uiSectionTop").Height = 18
     ws.Shapes("uiSectionBottom").Height = 18
     ws.Shapes("uiSectionTop").Left = 208
@@ -352,6 +388,7 @@ def main():
     for nm in panel_names:
         style_panel(ws.Shapes(nm), fill=WHITE, line=LINE)
 
+    # Clean English chart titles and tighter inset within cards.
     chart_titles = [
         "Monthly Revenue Trend | Full selected year(s)",
         "Revenue by Region | Color = KPI band",
@@ -453,6 +490,7 @@ def main():
             except Exception:
                 pass
 
+    # Open workbook in the intended view.
     ws.Activate()
     ws.Range("A1").Select()
     try:
