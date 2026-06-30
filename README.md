@@ -27,6 +27,8 @@ This skill is designed around a golden-reference FMCG dashboard with:
 - a Codex skill entrypoint in `SKILL.md`
 - style and UX rules in `references/`
 - a reusable Vietnamese prompt template
+- a Vietnamese overview in `README_vi.md`
+- practical usage examples in `examples/`
 - automation scripts to:
   - apply the approved visual style
   - export a dashboard preview
@@ -37,8 +39,11 @@ This skill is designed around a golden-reference FMCG dashboard with:
 ```text
 .
 ├── SKILL.md
+├── README_vi.md
 ├── agents/
 │   └── openai.yaml
+├── examples/
+│   └── README.md
 ├── references/
 │   ├── golden-reference-spec-vi.md
 │   ├── prompt-template-vi.md
@@ -145,6 +150,8 @@ Read these files before modifying the behavior:
 
 - `CHANGELOG.md` tracks major skill updates
 - `LICENSE` sets the default sharing terms for the repo
+- `README_vi.md` explains the repo in Vietnamese
+- `examples/README.md` shows how to apply the skill on real workbooks
 
 ## Notes
 
