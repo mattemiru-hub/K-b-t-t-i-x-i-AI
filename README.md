@@ -29,6 +29,7 @@ This skill is designed around a golden-reference FMCG dashboard with:
 - a reusable Vietnamese prompt template
 - a Vietnamese overview in `README_vi.md`
 - practical usage examples in `examples/`
+- sample deliverable references in `sample-output/`
 - automation scripts to:
   - apply the approved visual style
   - export a dashboard preview
@@ -44,6 +45,9 @@ This skill is designed around a golden-reference FMCG dashboard with:
 │   └── openai.yaml
 ├── examples/
 │   └── README.md
+├── sample-output/
+│   ├── README.md
+│   └── executive-dashboard-preview.png
 ├── references/
 │   ├── golden-reference-spec-vi.md
 │   ├── prompt-template-vi.md
@@ -152,6 +156,13 @@ Read these files before modifying the behavior:
 - `LICENSE` sets the default sharing terms for the repo
 - `README_vi.md` explains the repo in Vietnamese
 - `examples/README.md` shows how to apply the skill on real workbooks
+- `sample-output/README.md` shows what a polished output package should look like
+
+## Release
+
+Current public release target:
+
+- `v1.0.0` - first public-ready version of the skill package
 
 ## Notes
 
