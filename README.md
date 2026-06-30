@@ -81,6 +81,39 @@ Export a PNG preview and report query / model counts:
 powershell -ExecutionPolicy Bypass -File .\scripts\export_dashboard_preview.ps1 -WorkbookPath "C:\path\to\workbook.xlsx"
 ```
 
+## One-prompt usage
+
+Use this when you want another AI or Codex session to reproduce the same dashboard style on a different workbook:
+
+```text
+Use $excel-dashboard-ai-skill to turn my existing Excel workbook into a premium executive dashboard that feels like a Power BI cockpit, not an Excel report.
+
+Requirements:
+- Use Power Query for all source shaping
+- Use Power Pivot / Data Model relationships
+- Create DAX measures for all KPI and chart logic
+- Use PivotTables + PivotCharts for the main dashboard visuals
+- Keep the dashboard refreshable when raw data changes and I press Refresh All
+- Build a left slicer rail with Year, Month, Region, Channel, Category, Area Manager, and Sales Rep when those fields exist
+- Keep monthly trend meaningful: month slicer must not break the trend story for the selected year
+- KPI color bands must stay logically consistent under slicers
+- Use a clean executive layout with top KPI cards, section bars, chart cards, and a compact KPI band guide
+- Optimize the layout for 75% zoom in Excel
+- Save the workbook with the dashboard sheet active and visible
+
+Quality checks:
+- No broken links, #REF!, #VALUE!, or #DIV/0!
+- Chart titles, legends, labels, and slicers must fit cleanly
+- Channel Efficiency chart must use a metric palette, not KPI band colors
+- Audit spacing, alignment, subtitle sizing, and guide-card readability before finishing
+
+Deliverables:
+- Final .xlsx or .xlsm workbook
+- Preview image export
+- Count of queries, model tables, relationships, and DAX measures
+- Short Vietnamese guide explaining how to use the dashboard and what each color means
+```
+
 ## Design contract
 
 The skill intentionally preserves these rules:
@@ -97,7 +130,13 @@ The skill intentionally preserves these rules:
 Read these files before modifying the behavior:
 
 - `references/golden-reference-spec-vi.md`
+- `references/prompt-template-vi.md`
 - `references/qa-checklist-vi.md`
+
+## Repo extras
+
+- `CHANGELOG.md` tracks major skill updates
+- `LICENSE` sets the default sharing terms for the repo
 
 ## Notes
 
