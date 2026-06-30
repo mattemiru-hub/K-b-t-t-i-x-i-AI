@@ -2,6 +2,18 @@
 
 All notable changes to this skill package will be tracked here.
 
+## Unreleased
+
+### Added
+
+- `references/clarification-rules-vi.md` to force clarification-first behavior before field guessing
+- `references/repo-packaging-playbook-vi.md` to document how to build a complete repo like this in one pass
+
+### Changed
+
+- updated `SKILL.md` with a clarification gate, required question style, and do-not-guess rules
+- updated `README.md` and `README_vi.md` to explain the clarification-first behavior
+
 ## v1.0.0 - 2026-06-30
 
 First public-ready release.
