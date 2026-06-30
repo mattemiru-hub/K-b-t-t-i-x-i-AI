@@ -21,13 +21,16 @@ This skill is designed around a golden-reference FMCG dashboard with:
 - section bars
 - guide card
 - 75% zoom working view
+- clarification-first behavior when workbook mappings are ambiguous
 
 ## What this repo gives you
 
 - a Codex skill entrypoint in `SKILL.md`
 - style and UX rules in `references/`
+- clarification rules that force AI to ask before guessing critical mappings
 - a reusable Vietnamese prompt template
 - a Vietnamese overview in `README_vi.md`
+- a Vietnamese repo-packaging playbook for future skill builds
 - practical usage examples in `examples/`
 - sample deliverable references in `sample-output/`
 - automation scripts to:
@@ -49,8 +52,10 @@ This skill is designed around a golden-reference FMCG dashboard with:
 │   ├── README.md
 │   └── executive-dashboard-preview.png
 ├── references/
+│   ├── clarification-rules-vi.md
 │   ├── golden-reference-spec-vi.md
 │   ├── prompt-template-vi.md
+│   ├── repo-packaging-playbook-vi.md
 │   └── qa-checklist-vi.md
 ├── scripts/
 │   ├── apply_golden_reference_style.py
@@ -69,6 +74,7 @@ Use this skill when you want to:
 - force the output to follow an approved executive layout
 - audit slicers, colors, workbook visibility, zoom, guide-card logic, or chart UX
 - generate a reusable prompt that another AI can follow
+- force the AI to ask the right clarification questions instead of guessing business-critical fields
 
 ## Install for Codex
 
@@ -137,6 +143,7 @@ The skill intentionally preserves these rules:
 
 - Power BI-like executive dashboard feel
 - Pivot-based visuals for the main dashboard
+- clarification-first behavior when raw field mapping is ambiguous
 - KPI band colors only for attainment status
 - metric palette for `Channel Efficiency | Gross Margin vs Trade Spend`
 - stable chart colors under slicers
@@ -146,8 +153,10 @@ The skill intentionally preserves these rules:
 
 Read these files before modifying the behavior:
 
+- `references/clarification-rules-vi.md`
 - `references/golden-reference-spec-vi.md`
 - `references/prompt-template-vi.md`
+- `references/repo-packaging-playbook-vi.md`
 - `references/qa-checklist-vi.md`
 
 ## Repo extras
@@ -155,6 +164,7 @@ Read these files before modifying the behavior:
 - `CHANGELOG.md` tracks major skill updates
 - `LICENSE` sets the default sharing terms for the repo
 - `README_vi.md` explains the repo in Vietnamese
+- `references/repo-packaging-playbook-vi.md` explains how to build a complete repo like this in one pass
 - `examples/README.md` shows how to apply the skill on real workbooks
 - `sample-output/README.md` shows what a polished output package should look like
 
