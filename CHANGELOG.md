@@ -2,7 +2,7 @@
 
 All notable changes to this skill package will be tracked here.
 
-## Unreleased
+## v1.0.1 - 2026-06-30
 
 ### Added
 
