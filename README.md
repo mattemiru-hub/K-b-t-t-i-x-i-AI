@@ -172,7 +172,7 @@ Read these files before modifying the behavior:
 
 Current public release target:
 
-- `v1.0.0` - first public-ready version of the skill package
+- `v1.0.1` - clarification-first release with stronger ask-before-guess behavior
 
 ## Notes
 
