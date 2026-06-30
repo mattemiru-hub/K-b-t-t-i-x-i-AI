@@ -1,4 +1,4 @@
 interface:
-  display_name: "Excel Executive Dashboard"
+  display_name: "Excel Dashboard AI"
   short_description: "Build polished Power BI-like Excel BI"
-  default_prompt: "Use $excel-executive-dashboard-golden-reference to turn my Excel data into a refreshable Power Query + Power Pivot + DAX executive dashboard that matches the golden reference layout."
+  default_prompt: "Use $excel-dashboard-ai-skill to turn my Excel data into a refreshable Power Query + Power Pivot + DAX executive dashboard that matches the approved layout."
