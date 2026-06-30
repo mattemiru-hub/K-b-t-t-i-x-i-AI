@@ -1,9 +1,9 @@
 ---
-name: excel-executive-dashboard-golden-reference
-description: Build premium Excel executive dashboards inside Excel using Power Query, Power Pivot, DAX, PivotTables, PivotCharts, slicers, KPI cards, and a Power BI-like golden-reference layout. Use when Codex needs to turn an existing workbook or raw dataset into a refreshable executive dashboard, rebuild a dashboard to match the approved local reference, polish workbook UX at 75 percent zoom, export dashboard previews, or audit slicer, chart, guide-card, and workbook-visibility issues.
+name: excel-dashboard-ai-skill
+description: Build premium Excel executive dashboards inside Excel using Power Query, Power Pivot, DAX, PivotTables, PivotCharts, slicers, KPI cards, and a Power BI-like layout. Use when Codex needs to turn an existing workbook or raw dataset into a refreshable executive dashboard, rebuild a dashboard to match an approved local reference, polish workbook UX at 75 percent zoom, export dashboard previews, or audit slicer, chart, guide-card, and workbook-visibility issues.
 ---
 
-# Excel Executive Dashboard Golden Reference
+# Excel Dashboard AI Skill
 
 ## Quick Start
 
