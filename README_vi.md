@@ -13,6 +13,7 @@
 - Dùng PivotTable + PivotChart cho các visual chính
 - Tạo bộ slicer rõ ràng, dễ lọc, dễ đọc
 - Căn chỉnh dashboard để nhìn gọn ở mức zoom 75%
+- Tự hỏi lại các câu cần thiết khi workbook còn mơ hồ, thay vì đoán bừa
 
 ## Phù hợp khi nào
 
@@ -23,6 +24,7 @@ Dùng skill này khi bạn muốn:
 - ép AI đi theo một visual contract có sẵn
 - audit các lỗi UX như slicer, màu chart, guide card, zoom, workbook visibility
 - tạo prompt mẫu để người khác gõ lại và ra kết quả cùng style
+- ép AI phải hỏi lại đúng các mapping quan trọng trước khi build
 
 ## Cách dùng nhanh
 
@@ -50,9 +52,16 @@ Dùng skill này khi bạn muốn:
 
 - `SKILL.md`: quy tắc vận hành của skill
 - `references/golden-reference-spec-vi.md`: contract về giao diện và UX
+- `references/clarification-rules-vi.md`: luật để AI tự hỏi lại trước khi đoán
 - `references/prompt-template-vi.md`: prompt mẫu bằng tiếng Việt
+- `references/repo-packaging-playbook-vi.md`: playbook đóng gói một repo skill hoàn chỉnh
 - `references/qa-checklist-vi.md`: checklist audit trước khi giao file
 - `examples/README.md`: ví dụ áp dụng skill trong tình huống thực tế
+- `sample-output/README.md`: mô tả gói bàn giao mẫu khi skill hoàn thành tốt
+
+## Phiên bản public
+
+- `v1.0.0`: bản public-ready đầu tiên của repo skill này
 
 ## Lưu ý
 
