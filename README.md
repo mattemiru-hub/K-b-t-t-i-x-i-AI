@@ -40,7 +40,7 @@ This skill is designed around a golden-reference FMCG dashboard with:
 │   ├── export_dashboard_preview.ps1
 │   └── install_local_skill.ps1
 └── assets/
-    └── golden-reference-preview.png
+    └── README.md
 ```
 
 ## Use cases
@@ -101,5 +101,6 @@ Read these files before modifying the behavior:
 
 ## Notes
 
-- The local repo includes `assets/golden-reference-preview.png` as the reference image asset.
+- `assets/README.md` explains the reference asset setup.
+- The local working copy includes `golden-reference-preview.png` as the approved dashboard preview image.
 - The skill is meant for Windows Excel automation because the styling workflow uses Excel COM.
