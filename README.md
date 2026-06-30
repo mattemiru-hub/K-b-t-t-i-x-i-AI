@@ -2,6 +2,14 @@
 
 GitHub-ready skill package for building Excel executive dashboards that feel closer to a Power BI cockpit than a spreadsheet report.
 
+![Golden reference preview](./assets/golden-reference-preview.png)
+
+## Quick start
+
+1. Copy this repo into your local Codex skills folder with `scripts/install_local_skill.ps1`.
+2. Point Codex to your workbook and call `$excel-dashboard-ai-skill`.
+3. Let the skill rebuild the data stack and apply the approved executive dashboard style.
+
 This skill is designed around a golden-reference FMCG dashboard with:
 
 - Power Query for data shaping
