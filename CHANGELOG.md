@@ -2,6 +2,16 @@
 
 All notable changes to this skill package will be tracked here.
 
+## Unreleased
+
+### Added
+
+- `scripts/init_standard_skill_repo.ps1` to bootstrap a new repo from a built-in reusable template
+
+### Changed
+
+- updated repo documentation to explain the reusable template workflow
+
 ## v1.0.1 - 2026-06-30
 
 ### Added
