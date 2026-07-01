@@ -52,6 +52,14 @@ Thiếu clarification gate thì AI dễ đoán. Thiếu non-negotiables thì out
 
 Đây là nơi giữ những rule dài, để `SKILL.md` gọn nhưng vẫn đủ mạnh.
 
+## 4.1. Nếu muốn tái dùng nhiều lần
+
+Nếu muốn lần sau không dựng lại bằng tay, nên thêm:
+
+- `scripts/init_standard_skill_repo.ps1` để tạo repo mới từ template dựng sẵn
+
+Như vậy lần sau chỉ cần thay tên skill, display name, và domain summary là có ngay một repo đủ bộ để tinh chỉnh tiếp.
+
 ## 5. `README.md` phải phục vụ người mới
 
 README tốt phải trả lời được ngay:
