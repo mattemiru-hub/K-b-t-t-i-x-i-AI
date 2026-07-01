@@ -60,6 +60,7 @@ This skill is designed around a golden-reference FMCG dashboard with:
 ├── scripts/
 │   ├── apply_golden_reference_style.py
 │   ├── export_dashboard_preview.ps1
+│   ├── init_standard_skill_repo.ps1
 │   └── install_local_skill.ps1
 └── assets/
     └── golden-reference-preview.png
@@ -91,6 +92,16 @@ C:\Users\admin\.codex\skills\excel-dashboard-ai-skill
 ```
 
 ## Main scripts
+
+Bootstrap a new public-ready skill repo from the reusable template:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\init_standard_skill_repo.ps1 `
+  -TargetPath "C:\path\to\new-skill-repo" `
+  -SkillName "my-new-skill" `
+  -DisplayName "My New Skill" `
+  -DomainSummary "cleaning and packaging my domain workflow"
+```
 
 Apply the approved dashboard style:
 
@@ -165,6 +176,7 @@ Read these files before modifying the behavior:
 - `LICENSE` sets the default sharing terms for the repo
 - `README_vi.md` explains the repo in Vietnamese
 - `references/repo-packaging-playbook-vi.md` explains how to build a complete repo like this in one pass
+- `scripts/init_standard_skill_repo.ps1` generates a full repo from a built-in reusable template
 - `examples/README.md` shows how to apply the skill on real workbooks
 - `sample-output/README.md` shows what a polished output package should look like
 
