@@ -54,9 +54,7 @@ Dùng skill này khi bạn muốn:
 - `references/golden-reference-spec-vi.md`: contract về giao diện và UX
 - `references/clarification-rules-vi.md`: luật để AI tự hỏi lại trước khi đoán
 - `references/prompt-template-vi.md`: prompt mẫu bằng tiếng Việt
-- `references/repo-packaging-playbook-vi.md`: playbook đóng gói một repo skill hoàn chỉnh
 - `references/qa-checklist-vi.md`: checklist audit trước khi giao file
-- `scripts/init_standard_skill_repo.ps1`: script sinh repo mới từ template dựng sẵn trong code
 - `examples/README.md`: ví dụ áp dụng skill trong tình huống thực tế
 - `sample-output/README.md`: mô tả gói bàn giao mẫu khi skill hoàn thành tốt
 
