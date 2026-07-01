@@ -30,7 +30,6 @@ This skill is designed around a golden-reference FMCG dashboard with:
 - clarification rules that force AI to ask before guessing critical mappings
 - a reusable Vietnamese prompt template
 - a Vietnamese overview in `README_vi.md`
-- a Vietnamese repo-packaging playbook for future skill builds
 - practical usage examples in `examples/`
 - sample deliverable references in `sample-output/`
 - automation scripts to:
@@ -55,12 +54,10 @@ This skill is designed around a golden-reference FMCG dashboard with:
 │   ├── clarification-rules-vi.md
 │   ├── golden-reference-spec-vi.md
 │   ├── prompt-template-vi.md
-│   ├── repo-packaging-playbook-vi.md
 │   └── qa-checklist-vi.md
 ├── scripts/
 │   ├── apply_golden_reference_style.py
 │   ├── export_dashboard_preview.ps1
-│   ├── init_standard_skill_repo.ps1
 │   └── install_local_skill.ps1
 └── assets/
     └── golden-reference-preview.png
@@ -92,16 +89,6 @@ C:\Users\admin\.codex\skills\excel-dashboard-ai-skill
 ```
 
 ## Main scripts
-
-Bootstrap a new public-ready skill repo from the reusable template:
-
-```powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\init_standard_skill_repo.ps1 `
-  -TargetPath "C:\path\to\new-skill-repo" `
-  -SkillName "my-new-skill" `
-  -DisplayName "My New Skill" `
-  -DomainSummary "cleaning and packaging my domain workflow"
-```
 
 Apply the approved dashboard style:
 
@@ -167,7 +154,6 @@ Read these files before modifying the behavior:
 - `references/clarification-rules-vi.md`
 - `references/golden-reference-spec-vi.md`
 - `references/prompt-template-vi.md`
-- `references/repo-packaging-playbook-vi.md`
 - `references/qa-checklist-vi.md`
 
 ## Repo extras
@@ -175,8 +161,6 @@ Read these files before modifying the behavior:
 - `CHANGELOG.md` tracks major skill updates
 - `LICENSE` sets the default sharing terms for the repo
 - `README_vi.md` explains the repo in Vietnamese
-- `references/repo-packaging-playbook-vi.md` explains how to build a complete repo like this in one pass
-- `scripts/init_standard_skill_repo.ps1` generates a full repo from a built-in reusable template
 - `examples/README.md` shows how to apply the skill on real workbooks
 - `sample-output/README.md` shows what a polished output package should look like
 
